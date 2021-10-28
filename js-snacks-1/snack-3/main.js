@@ -1,20 +1,14 @@
 console.log('OK JS');
 
 /* 
-JSnack 2
-L’utente inserisce due parole in successione, con due prompt.
-Il software stampa prima la parola più corta, poi la parola più lunga. 
+Il software deve chiedere per 5 volte all’utente di inserire un numero.
+ Il programma stampa la somma di tutti i numeri inseriti con for
+ e opzionalmente con while (edited) 
 */
-
-const parola_1 = prompt('inserisci una parola')
-const parola_2 = prompt('inserisci una seconda parola')
-
-if (parola_1.length > parola_2.length) {
-    console.log(parola_2, parola_1);
+let somma = 0
+for (i=0; i<5; i++) {
+    const new_Numb = parseInt(prompt('inserisci un numero'))
+    somma = somma + new_Numb
 }
-else if (parola_1.length < parola_2.length) {
-    console.log(parola_1, parola_2);
-} 
-else {
-    console.log(`Le parole ${parola_1} e ${parola_2} hanno la stessa lnghezza`);
-}
+
+console.log(somma);
