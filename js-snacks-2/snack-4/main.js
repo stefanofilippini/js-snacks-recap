@@ -1,18 +1,17 @@
 console.log('OK JS');
 
 /* 
-Crea un array vuoto.
-Chiedi per 6 volte all’utente di inserire un numero,
-se è dispari inseriscilo nell’array
+Crea un array di numeri interi
+e fai la somma di tutti gli elementi che sono in posizione dispari
 */
-const Array = []
 
-for (i=0; i<6; i++) {
-    const new_numb = parseInt(prompt('inserisci un numero'))
+const array = [3, 4, 5, 6, 7, 8, 9, 10]
 
-    if (new_numb%2 !==0) {
-        Array.push(new_numb)
+let somma = 0
+for (i=0; i<array.length; i++) {
+    if (i%2 !==0) {
+        somma = somma + array[i]
     }
 }
 
-console.log(Array);
+console.log(somma);
