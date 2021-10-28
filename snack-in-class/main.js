@@ -9,24 +9,25 @@ const button = document.getElementById ("btn");
 
 const array = [];
 let num = 0;
+let string = '';
 button.addEventListener ("click", function () {
-    const string = prompt('inserisci un numero');
     let somma = 0;
-    let media = 0
-    if (string.length === 4) {
-        console.log('ciao');
-        for (i=0; i<4; i++) {
-            array.push(parseInt(string[i]))
-        }
-        console.log(array);
-        for (i=0; i<4; i++) {
-            somma = somma + array[i]
-        }
-        media = somma / 4;
-        console.log(somma, media);
+    let media = 0;
+    while (string.length !== 4) {
+        alert ('inserisci un numero di 4 cifre');
+        string = prompt('inserisci un numero di 4 cifre');
     }
-    else {
-        console.log('bau');
-        
+
+    for (i=0; i<4; i++) {
+        array.push(string[i])
     }
+    
+    console.log(array);
+
+    for (i=0; i<4; i++) {
+        somma = somma + array[i];
+    }
+
+    media = somma / 4;
+    console.log(somma, media)
 })
